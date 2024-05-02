@@ -1,0 +1,38 @@
+<% if flights %>
+
+<h4><%= pluralize(flights.length, 'flight') %> matched your search</h4>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Flight #</th>
+        <th>Departs</th>
+        <th>Arrives</th>
+        <th>Date</th>
+        <th>Departure</th>
+        <th>Duration</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% flights.each do |flight| %>
+        <tr>
+          <td><%= flight.formatted_flight_number %></td>
+          <td><%= flight.origin.code %></td>
+          <td><%= flight.destination.code %></td>
+          <td><%= flight.formatted_date %></td>
+          <td><%= flight.formatted_time %></td>
+          <td><%= flight.formatted_duration %></td>
+          <td class='td-booking'>
+            <%= button_to 'Book Flight',
+                new_booking_path,
+                method: :get,
+                params: { flight_id: flight.id, tickets: params[:flight][:tickets] },
+                id: 'booking-button' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

@@ -1,0 +1,44 @@
+$flight-width: 65%;
+$booking-blue: #385898;
+
+.search-form {
+  display: flex;
+  width: $flight-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.search-form select {
+  flex-grow: 1;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 16px;
+  border: 1px solid #949494;
+  height: 3.5vh;
+}
+
+.search-form select:focus {
+  outline: none;
+}
+
+#booking-button {
+  width: 100%;
+  border: 1px solid $booking-blue;
+  border-radius: 4px;
+  cursor: pointer;
+  height: 28px;
+  background-color: white;
+  color: $booking-blue;
+}
+
+#booking-button:hover {
+  color: white;
+  background-color: $booking-blue;
+  transition: 300ms;
+}
+
+#booking-button:focus {
+  outline: none;
+  box-shadow: 0 0 7px 1px $booking-blue;
+  border: none;
+  transition: none;
+}

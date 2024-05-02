@@ -1,0 +1,26 @@
+<h3>Complete Booking</h3>
+<%= render 'flights/flight', flight: @flight %>
+
+<h4>Passengers Details...</h4>
+
+  <%= form_with(model: @booking, local: true) do |form| %>
+    <%= form.hidden_field :flight_id, value: @flight.id %>
+    <div class='passenger-form-container'>
+        <%= form.fields_for :passengers do |passengers_form| %>
+          <%= passengers_form.hidden_field :id, value: nil %>
+          <div class='passenger-form-fields'>
+            <div class='input-container'>
+              <%= passengers_form.text_field :name, class: 'passenger-input no-right-border', placeholder: 'Passenger Name' %>
+            </div>
+            <div class='input-container'>
+              <%= passengers_form.text_field :email, class: 'passenger-input', placeholder: 'Passenger Email' %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <div id='confirmation-buttons'>
+      <%= link_to 'Cancel', root_path, id: 'cancel-booking' %>
+      <ion-icon name="airplane-sharp", id='booking-airplane'></ion-icon>
+      <%= form.submit 'Book Flight', id: 'book-flight' %>
+    </div>
+  <% end %>

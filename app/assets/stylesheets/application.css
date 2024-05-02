@@ -1,0 +1,149 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body {
+  margin:0;
+  padding:0;
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(45deg,#f9fcff, #f1fbfd, #eff5fc);
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 400;
+}
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 7vh;
+  background-color: #7190af6b;
+  background-image: linear-gradient(45deg, #3c4e5d, #afd8ec85);
+  box-sizing: border-box;
+}
+
+.header-left {
+  display: flex;
+}
+
+.header-button {
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  padding: 1vw;
+  font-size: 15px;
+}
+
+.header-button:hover {
+  background: rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.header-button:focus {
+  outline: none;
+}
+
+.header-item {
+  color: white;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.header-item:hover {
+  text-decoration: none;
+}
+
+.border-right {
+  border-right: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+.border-left {
+  border-left: 1px solid rgba(0, 0, 0, 0.171);
+}
+
+/* logo */
+
+.title {
+  font-family: 'Tangerine', cursive;
+  font-size: 32px;
+}
+
+ion-icon {
+  font-size: 27px;
+  color: white;
+  transform: rotate(-33deg);
+}
+
+/* container for all pages excluding header */
+
+.page-body {
+  padding: 1vh 5vw 2vw 5vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* flash */
+
+.flash-container {
+  background-color: #7c7aff4f;
+}
+
+#notice {
+  padding: 1vh;
+  color: rgb(22, 129, 76);
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.alert {
+  padding: 1vh;
+  color: black;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+  color: #385898;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+/* About page */
+
+p {
+  font-size: 14px;
+  font-family: 'Nanum Myeongjo', serif;
+}
+
+.empty-space {
+  height: 71vh;
+}
+
+#home-link {
+  font-size: 14px;
+}
