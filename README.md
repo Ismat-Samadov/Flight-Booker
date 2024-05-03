@@ -95,4 +95,4 @@ I decided to make a Yahoo Mail account `odinair@yahoo.com` to send from — for 
 
 Adding `protocol: 'https'` to the production `default_url_options` makes URL links go to the secure version of the app. (I hadn't realized before that Heroku apps are on both `http` and `https`.)
 
--Andrew Hayhurst
+-Ismat Samadov
